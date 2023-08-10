@@ -43,13 +43,11 @@ Citizen.CreateThread(function()
                 _nearestD = D
             end
         end
-
         if pBlip and #(pBlip.p[1] - coords) < deleteDist then
             TriggerEvent('chat:addMessage', {
-                color = { 255, 0, 0 },
+                header = 'POSTALS',
                 args = {
-                    'Postals',
-                    "You've reached your postal destination!"
+                    "Je hebt postcode ^5 " .. pBlip.p.code .. "^7 bereikt."
                 }
             })
             RemoveBlip(pBlip.hndl)

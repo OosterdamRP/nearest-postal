@@ -1,11 +1,11 @@
 config = {
     -- enables version checking (if this is enabled and there is no new version it won't display a message anyways)
-    versionCheck = true,
+    versionCheck = false,
 
     text = {
         -- The text to display on-screen for the nearest postal. 
         -- Formatted using Lua strings, http://www.lua.org/pil/20.html
-        format = '~y~Nearest Postal~w~: %s (~g~%.2fm~w~)',
+        format = '',
 
         -- ScriptHook PLD Position
         --posX = 0.225,
@@ -19,7 +19,7 @@ config = {
     blip = {
         -- The text to display in chat when setting a new route. 
         -- Formatted using Lua strings, http://www.lua.org/pil/20.html
-        blipText = 'Postal Route %s',
+        blipText = 'Postcode route %s',
 
         -- The sprite ID to display, the list is available here:
         -- https://docs.fivem.net/docs/game-references/blips/#blips
@@ -34,16 +34,16 @@ config = {
         distToDelete = 100.0,
 
         -- The text to display in chat when a route is deleted
-        deleteText = 'Route deleted',
+        deleteText = 'Route verwijdert!',
 
         -- The text to display in chat when drawing a new route
-        drawRouteText = 'Drawing a route to %s',
+        drawRouteText = 'Een route berekenen naar %s',
 
         -- The text to display when a postal is not found.
-        notExistText = "That postal doesn't exist"
+        notExistText = "Deze postcode bestaat niet!"
     },
 
     -- How often in milliseconds the postal code is updated on each client.
     -- I wouldn't recommend anything lower than 50ms for performance reasons
-    updateDelay = nil,
+    updateDelay = 50,
 }

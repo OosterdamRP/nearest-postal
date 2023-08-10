@@ -51,16 +51,16 @@ RegisterCommand('postal', function(_, args)
 
         TriggerEvent('chat:addMessage', {
             color = { 255, 0, 0 },
+            header = 'POSTALS',
             args = {
-                'Postals',
-                format(config.blip.drawRouteText, foundPostal.code)
+                format(config.blip.drawRouteText, "^5" .. foundPostal.code .. "^7")
             }
         })
     else
         TriggerEvent('chat:addMessage', {
             color = { 255, 0, 0 },
+            header = 'POSTALS',
             args = {
-                'Postals',
                 config.blip.notExistText
             }
         })
